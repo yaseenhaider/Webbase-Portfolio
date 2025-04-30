@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar-links" id="navbar-links">
+                <ul>
+                    <li><a href="index.html" class="nav-link ">Home</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="project.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-heading">Contact <span class="highlight">Me</span></h2>
+            <div class="contact-content">
+                <!-- Left Side - Contact Details -->
+                <div class="contact-info">
+                    <ul>
+                        <li><i class="fas fa-envelope"></i>  <a href="mailto:junaidashraf.code@gmail.com" target="_blank">junaidashraf.code@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:03006690923" target="_blank">03006690923</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Faisalabad, Pakistan</li>
+                    </ul>
+                </div>
+
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form">
+                    <h3>For Any Query</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevents the default form submission
+
+                setTimeout(function () {
+                    location.reload(); // Reloads the page after 1 second
+                }, 1000);
+            });
+        });
+        document.addEventListener('click', function(event) {
+            var isClickInside = document.getElementById('navbar-toggle').contains(event.target) || document.getElementById('navbar-links').contains(event.target);
+
+            if (!isClickInside) {
+                document.getElementById('navbar-links').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

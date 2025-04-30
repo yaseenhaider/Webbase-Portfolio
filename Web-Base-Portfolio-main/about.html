@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar-links" id="navbar-links">
+                <ul>
+                    <li><a href="index.html" class="nav-link ">Home</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="project.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-heading">About <span class="highlight">Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm <strong>Junaid Ashraf</strong>, a passionate and ambitious individual aspiring to become a <strong>Software Engineer</strong>. My journey in this field has been driven by curiosity, determination, and a love for problem-solving.</p>
+                    <p><Strong>Currently,</Strong> I am pursuing my education at Comsat University Islamabad, specializing in software engineering. 
+                        The rigorous curriculum at my university has helped me build a solid foundation in programming, data structures, and algorithms, which are crucial for any aspiring software engineer.
+                         I take immense pride in my academic achievements, having consistently earned an A grade, which reflects my dedication and hard work.</p>
+                    <br>
+                    <p><Strong>Achievements : </Strong></p>
+                    <p>Successfully completed <strong>CS50 – Harvard's Introduction to Computer Science.</strong>
+                        <br>
+                        Gained expertise in algorithms, data structures, web development, and software engineering principles.</p>
+                    <p><Strong>Future Goal :</Strong></p>
+                    <p>As I advance, I am shifting my focus toward <strong>AI Engineering</strong>, driven by my fascination with machine learning, deep learning, and data science. 
+                        I am actively learning about neural networks, NLP, and computer vision through courses and projects.
+                         My ultimate goal is to develop AI-driven solutions that address real-world challenges in industries like healthcare, finance, and automation by combining my software engineering background with AI expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+        document.addEventListener('click', function(event) {
+            var isClickInside = document.getElementById('navbar-toggle').contains(event.target) || document.getElementById('navbar-links').contains(event.target);
+
+            if (!isClickInside) {
+                document.getElementById('navbar-links').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

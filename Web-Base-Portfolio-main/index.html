@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Welcome to my Portfolio</a>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar-links" id="navbar-links">
+                <ul>
+                    <li><a href="index.html" class="nav-link ">Home</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="project.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-img-container">
+                    <img src="images/Photo.jpeg" alt="Profile Image" class="profile-img">
+                </div>
+                <div class="text-container">
+                    <h1><span class="greeting">Hi,</span> <span class="name-highlight">Junaid Ashraf</span></h1>
+                    <p>My passion lies in <strong>learning new technologies</strong> and staying updated with the latest trends in the tech world. I enjoy exploring innovative solutions and continuously improving my skills.</p>
+            
+                    <div class="social-links">
+                        <a href="https://leetcode.com/u/56_56/" target="_blank" class="social-link"><i class="fas fa-code"></i></a>
+                        <a href="https://github.com/Junaid-Ashraf-56" target="_blank" class="social-link"><i class="fab fa-github"></i> </a>
+                        <a href="https://www.instagram.com/junaid_ashraf_56/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> </a>
+                        <a href="https://www.linkedin.com/in/junaid-ashraf56/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> </a>
+                    </div>
+                    <br>
+                    <a href="#projects" class="btn">Hire me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>   
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".profile-img").classList.add("profile-img-loaded");
+        });
+
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            var isClickInside = document.getElementById('navbar-toggle').contains(event.target) || document.getElementById('navbar-links').contains(event.target);
+
+            if (!isClickInside) {
+                document.getElementById('navbar-links').classList.remove('active');
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Welcome to my Portfolio</a>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar-links" id="navbar-links">
+                <ul>
+                    <li><a href="index.html" class="nav-link ">Home</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="project.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-heading">My <span class="highlight">Skills</span></h2>
+            <br>
+            <div class="skills-row">
+                <div class="skill-item">
+                    <img src="images/Dart.png" alt="Dart" class="skill-icon">
+                    <h3>Dart</h3>
+                    <p>Proficient in Dart programming language for Flutter development.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/C++.png" alt="C++" class="skill-icon">
+                    <h3>C++</h3>
+                    <p>Good knowledge of C++ with Object-Oriented Programming (OOP).</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/Java.png" alt="Java" class="skill-icon">
+                    <h3>Java</h3>
+                    <p>Strong understanding of Java, OOP principles, and currently learning Data Structures & Algorithms (DSA).</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/JavaFx.png" alt="Python" class="skill-icon-4">
+                    <h3>Java FX</h3>
+                    <p>"Skilled in JavaFX for building interactive desktop applications with modern UI, FXML, and event-driven programming."</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/sqlite.png" alt="SQLite" class="skill-icon-3">
+                    <h3>SQLite</h3>
+                    <p>Familiar with SQLite for lightweight database management, executing queries, and handling structured data in applications.</p>
+                </div>
+            </div>
+            <br>
+            <div class="skills-row">
+                <div class="skill-item">
+                    <img src="images/Linux.png" alt="Linux" class="skill-icon-2">
+                    <h3>Linux</h3>
+                    <p>Comfortable with Linux commands, shell scripting, and system navigation for development environments.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/Git.png" alt="Git" class="skill-icon-2">
+                    <h3>Git</h3>
+                    <p>Proficient in Git for version control, managing repositories, and collaborating on development projects.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/intellij_idea.png" alt="Intellij Idea" class="skill-icon-3">
+                    <h3>Intellij Idea</h3>
+                    <p>Proficient in Git for version control, managing repositories, and collaborating on development projects.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="images/Docker.png" alt="Docker" class="skill-icon-4">
+                    <h3>Docker</h3>
+                    <p>Proficient in Docker for containerization, creating and managing containers, writing Dockerfiles, and orchestrating multi-container applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const skillsSection = document.querySelector(".skills-section");
+            
+            if (skillsSection) {
+                setTimeout(() => {
+                    skillsSection.classList.add("loaded");
+                }, 200); // Delay to make it smooth
+            }
+        });
+        document.addEventListener('click', function(event) {
+            var isClickInside = document.getElementById('navbar-toggle').contains(event.target) || document.getElementById('navbar-links').contains(event.target);
+
+            if (!isClickInside) {
+                document.getElementById('navbar-links').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
